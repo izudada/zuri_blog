@@ -81,10 +81,14 @@ def register(response):
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
+        else:
+            return render(response, 'register.html', {'form' : form})
     else:
         form = RegisterForm()
 
-    return render(response, 'register.html', {'form' : form})
+        return render(response, 'register.html', {'form' : form})
+
+    return HttpResponseRedirect("/login/")
 
 def create(response):
     if response.user.is_authenticated:
