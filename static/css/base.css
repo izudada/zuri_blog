@@ -3,7 +3,8 @@
 }
 
 .post{
-    padding: 0 0 40px 0;
+    padding: 35px;
+    margin: 0 0 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
