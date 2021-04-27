@@ -78,11 +78,11 @@ def profile(response):
 
 def register(response):
     if response.method == "POST":
-        form = UserCreationForm(response.POST)
+        form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
     else:
-        form = UserCreationForm()
+        form = RegisterForm()
 
     return render(response, 'register.html', {'form' : form})
 
