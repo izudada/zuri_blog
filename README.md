@@ -20,7 +20,6 @@ The first thing to do is to clone the repository:
 
 ```sh
 $ git clone https://github.com/izudada/zuri_blog.git
-$ cd source
 ```
 
 Create a virtual environment to install dependencies and activate it use the link below first to install pipenv:
