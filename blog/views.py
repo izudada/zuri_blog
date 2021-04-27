@@ -82,7 +82,7 @@ def register(response):
         if form.is_valid():
             form.save()
     else:
-        form = RegisterForm()
+        form = UserCreationForm()
 
     return render(response, 'register.html', {'form' : form})
 
