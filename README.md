@@ -12,7 +12,7 @@ Features Include:
 
 -    A comment section (can only create for now)
 
--    Heroku Link
+-    Heroku Link at [here](https://izudada-blog.herokuapp.com/)
 
 ## Setup
 
