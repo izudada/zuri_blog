@@ -61,5 +61,5 @@ after you have made a purchase.
 
 To run the tests, `cd` into the directory where `manage.py` is:
 ```sh
-(env)$ python manage.py test gc_app
+# (env)$ python manage.py test gc_app
 ```
