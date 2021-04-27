@@ -57,7 +57,7 @@ The above will create a local db for you immediately you run django server.
 
 Once `pip` has finished downloading the dependencies:
 ```sh
-(env)$ python manage.py runserver
+(folder_name)$ python manage.py runserver
 ```
 And navigate to `http://127.0.0.1:8000/`.
 
