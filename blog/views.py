@@ -5,10 +5,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 
 from .models import Post, Comment
+from django.contrib.auth import login, authenticate, update_session_auth_hash
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
-from django.contrib.auth import update_session_auth_hash
 from .forms import RegisterForm, AddNewForm, NewCommentForm
 
 
@@ -81,7 +81,6 @@ def register(response):
         form = UserCreationForm(response.POST)
         if form.is_valid():
             form.save()
-        return redirect('login')
     else:
         form = RegisterForm()
 
