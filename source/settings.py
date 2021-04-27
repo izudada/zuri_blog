@@ -33,7 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['izudada-blog.herokuapp.com', '127.0.0.1', 'localhost', '0.0.0.0']
+ALLOWED_HOSTS = ['izudada-blog.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -88,15 +88,10 @@ WSGI_APPLICATION = 'source.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dednnlrldceppe',
-        'HOST': 'ec2-34-225-167-77.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'lpofjyoqrfgceg',
-        'PASSWORD': '486f715a75c72b12a0fd0d1602cc2d9dbe5c223b54c6b1ec2bdd4529dce5933d',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / env('DATABASE_NAME'),
     }
 }
-
 
 
 # Password validation
