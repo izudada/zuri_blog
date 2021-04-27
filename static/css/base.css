@@ -3,13 +3,13 @@
 }
 
 .post{
-    padding: 35px;
-    margin: 0 0 40px 0;
+    padding: 15px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 80%;
     height: 40%;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
