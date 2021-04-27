@@ -37,8 +37,23 @@ Then install the dependencies:
 ```sh
 (env)$ pip install -r requirements.txt
 ```
-Note the `(env)` in front of the prompt. This indicates that this terminal
-session operates in a virtual environment set up by `pipenv`.
+Note the `(folder_name)` in front of the prompt. This indicates that this terminal
+session operates in a virtual environment set up by `pipenv` using your folder or root directory name.
+
+## Database
+
+In source folder locate the settings.py file, change the database section or variable with the code below to create your local db.
+
+```sh
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+```
+The above will create a local db for you immediately you run django server.
+
 
 Once `pip` has finished downloading the dependencies:
 ```sh
@@ -47,13 +62,9 @@ Once `pip` has finished downloading the dependencies:
 And navigate to `http://127.0.0.1:8000/`.
 
 
-## Walkthrough
-
-
-
 ## Tests
 
-To run the tests, `cd` into the directory where `manage.py` is:
+To run the tests, `cd` into the directory or make sure you are in the same directory where `manage.py` is:
 ```sh
-# (env)$ python manage.py test gc_app
+(folder_name)$ python manage.py test blog
 ```
