@@ -42,7 +42,6 @@ session operates in a virtual environment set up by `pipenv`.
 
 Once `pip` has finished downloading the dependencies:
 ```sh
-(env)$ cd source
 (env)$ python manage.py runserver
 ```
 And navigate to `http://127.0.0.1:8000/`.
@@ -50,11 +49,6 @@ And navigate to `http://127.0.0.1:8000/`.
 
 ## Walkthrough
 
-Before you interact with the application, go to GoCardless Sandbox and set up
-the Redirect URI in the Developer settings. To make it work with this
-application, use the value `http://127.0.0.1:8000/gocardless/confirm/`. This is to
-make sure you are redirected back to your site where the purchase is verified
-after you have made a purchase.
 
 
 ## Tests
