@@ -54,6 +54,10 @@ DATABASES = {
 ```
 The above will create a local db for you immediately you run django server.
 
+Use migrate command to effect database model:
+```sh
+(folder_name)$ python manage.py migrate
+```
 
 Once `pip` has finished downloading the dependencies:
 ```sh
