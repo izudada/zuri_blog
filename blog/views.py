@@ -109,3 +109,6 @@ def create(response):
         return render(response, 'new.html', {"form" : form})
     else:
         return HttpResponseRedirect("/login/")
+
+def index(response):
+    return render(response, 'index.html')

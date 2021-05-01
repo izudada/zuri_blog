@@ -11,5 +11,6 @@ urlpatterns = [
     path('post/update/<int:pk>/', UpdatePost.as_view(), name = "edit"),
     path('post/new/', views.create, name="new"),
     path('post/<int:pk>/', PostDetail.as_view(), name="post"),
-    path('', PostTitle.as_view(), name="home")
+    path('home/', PostTitle.as_view(), name="home"),
+    path('', views.index, name='index')
 ]
