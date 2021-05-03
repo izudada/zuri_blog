@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
 {% block body %}
-    <h1> Change Password </h1>
-    <div>
-        <form action="" method="post">
+    <h3 class="intro"> Change Password </h3>
+    <div class="container">
+        <form action="" class="form-group" method="post">
             {% csrf_token %}
-            {{ form.as_p}}
+            {{ form|crispy}}
 
-            <input type="submit" value="Update">
+            <input class="home__button" type="submit" value="Update">
         </form>
     </div>
 

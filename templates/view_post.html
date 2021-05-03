@@ -2,28 +2,28 @@
 
 {% load crispy_forms_tags %}
 {% block body %}
-    <div>
-        <h2> {{ post.title }} </h2>
-        <small> {{ post.author }} </small>
+  <div class="container article">
+        <h3 class="intro"> {{ post.title }} </h3>
+        <small> <strong> Authort: </strong> {{ post.author }} </small> <br> <br>
         {% if user.is_authenticated and user == post.author %}
-            <a href="{% url 'edit' post.id %}"> Edit</a>
-            <a href="{% url 'delete' post.id %}"> Delete</a>    
+            <a class="home__button btn-sm" href="{% url 'edit' post.id %}"> Edit</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'delete' post.id %}"> Delete</a>    
         {% endif %}
         <p> {{ post.body }} </p>
         <hr>
-        <h2>Leave your comment!</h2>
+        <h4 class="intro">Leave your comment!</h4>
         <div id="comments_section">
         
           {% if user.is_authenticated %}
             <form method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                {{ comment_form|crispy }}
-                <button class="btn btn-info" type="submit">Add comment <i class="fas fa-comments"></i></button>
+                  {{ comment_form|crispy }}
+                <button class="home__button" type="submit">Add comment <i class="fas fa-comments"></i></button>
                 </div>
             </form>
           {% else %}
-            <a class="btn btn-outline-info" href="{% url 'login' %}">Log in to add a comment!</a><br>
+            <a class="home__button" href="{% url 'login' %}">Log in to add a comment!</a><br>
           {% endif %}
         
           {% if comments %}
@@ -48,5 +48,5 @@
             <strong class="text-secondary">No comments yet...</strong>
           {% endif %}
         
-        </div>
+    </div>
 {% endblock %}

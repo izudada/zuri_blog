@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <h1> Delete Post </h1>
-    <div>
-        <form action="" method="post">
+    <h3 class="intro"> Delete Post </h3>
+    <div class="container">
+        <form action="" class="form-group" method="post">
             {% csrf_token %}
             <p> Are you sure ou want to delete "{{post.title}}"</p>
 
-            <input type="submit" value="Delete">
+            <input type="submit" class="home__button" value="Delete">
         </form>
     </div>
 
