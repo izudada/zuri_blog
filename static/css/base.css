@@ -163,7 +163,7 @@ a {
 }
 
 .article{
-  margin-top: 300px;
+  margin-top: 500px;
 }
 
 .intro{
@@ -193,6 +193,14 @@ a {
 
 .post h3 {
   color: var(--first-color);
+}
+
+@media screen and (min-width: 300px) {
+
+  .article{
+    margin-top: 0;
+  }
+
 }
 
 /* ===== MEDIA QUERIES =====*/
@@ -238,8 +246,4 @@ a {
     justify-content: center;
     box-sizing: border-box;
   }
-}
-
-#loupe{
-  font-size: 33pt;
 }
