@@ -15,6 +15,7 @@
             </div>
 
             <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Home</a> </li>
                 {% if user.is_authenticated %}
                     <li class="nav__item"> <a class="nav__link" href="{% url 'new' %}"> Create Article </a> </li>
                     <li class="nav__item"><a href="{% url 'profile' %}" class="nav__link">Profile</a></li>
